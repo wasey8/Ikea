@@ -44,7 +44,7 @@ def data():
     headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Cafari/537.36'}
     r = requests.get(url, headers=headers)
     ab=[]
-    soup=BeautifulSoup(r.content,"html5lib")
+    soup=BeautifulSoup(r.content,"html.parser")
     
     for i in soup.find_all("div",{"class","range-revamp-product-compact"}):
         image=i.find('img').attrs['src']
