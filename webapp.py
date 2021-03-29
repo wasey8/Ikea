@@ -37,7 +37,7 @@ def convert():
 
 
 #-------IKEA website scrap-------------#
-@app.route("/data",methods=["POST"])
+@app.route("/info",methods=["POST"])
 def data():
     url=request.form.get('url')
     rate=convert()
